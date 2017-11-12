@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { RestauranteModel } from 'app/restaurants/restaurante/restaurante.model';
+import { RestauranteModel } from 'app/restaurants/restaurante.model';
+
 
 
 

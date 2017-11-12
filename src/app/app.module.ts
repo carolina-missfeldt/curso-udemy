@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { RetaurantService } from 'app/restaurants/retaurant.service';
+import { RestaurantService } from 'app/restaurants/restaurant.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,7 +30,7 @@ import { RestauranteComponent } from './restaurants/restaurante/restaurante.comp
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    RetaurantService 
+    RestaurantService 
   ],
   bootstrap: [AppComponent]
 })
