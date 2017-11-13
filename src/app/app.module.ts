@@ -16,6 +16,8 @@ import { DetalheRestaurantComponent } from './detalhe-restaurant/detalhe-restaur
 import { MenuComponent } from 'app/detalhe-restaurant/menu/menu.component';
 import { CarrinhoDeComprasComponent } from 'app/detalhe-restaurant/carrinho-de-compras/carrinho-de-compras.component';
 import { MenuItemComponent } from 'app/detalhe-restaurant/menu-item/menu-item.component';
+import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.component';
+
 
 
 
@@ -31,7 +33,8 @@ import { MenuItemComponent } from 'app/detalhe-restaurant/menu-item/menu-item.co
     DetalheRestaurantComponent,
     MenuComponent,
     CarrinhoDeComprasComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
