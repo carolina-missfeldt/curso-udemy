@@ -1,4 +1,5 @@
 
+
 import { Injectable } from '@angular/core';
 import {Http, Response} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
@@ -8,7 +9,7 @@ import 'rxjs/add/operator/catch';
 import { RestauranteModel } from 'app/restaurants/restaurante.model';
 import { MEAT_API } from './../app.api';
 import { ErrorMsg } from 'app/app.error';
-
+import { MenuItem } from './../detalhe-restaurant/menu-item/menu-item.model';
 
 @Injectable()
 export class RestaurantService {
@@ -32,6 +33,12 @@ export class RestaurantService {
       .map(response => response.json())
       .catch(ErrorMsg.handleError)
 
+  }
+
+  menuOfRestaurant(id: string): Observable <MenuItem[]>{
+    return this.http.get(`${MEAT_API}/restaurants/${id}/menu`)
+    .map(response => response.json())
+    .catch(ErrorMsg.handleError)
   }
 
 }
