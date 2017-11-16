@@ -1,9 +1,8 @@
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
 import { RestaurantService } from 'app/restaurants/restaurant.service';
 import { CarrinhoDeComprasService } from 'app/detalhe-restaurant/carrinho-de-compras/carrinho-de-compras.service';
 
@@ -19,6 +18,7 @@ import { MenuComponent } from 'app/detalhe-restaurant/menu/menu.component';
 import { CarrinhoDeComprasComponent } from 'app/detalhe-restaurant/carrinho-de-compras/carrinho-de-compras.component';
 import { MenuItemComponent } from 'app/detalhe-restaurant/menu-item/menu-item.component';
 import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -36,7 +36,8 @@ import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.compone
     MenuComponent,
     CarrinhoDeComprasComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,10 @@ import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.compone
   ],
   providers: [
     RestaurantService,
-    CarrinhoDeComprasService 
+    CarrinhoDeComprasService,
+    {
+      provide: LOCALE_ID, useValue: 'pt-BR'
+    } 
   ],
   bootstrap: [AppComponent]
 })

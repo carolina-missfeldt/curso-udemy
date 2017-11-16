@@ -20,4 +20,11 @@ export class CarrinhoDeComprasComponent implements OnInit {
     return this.compraService.total()
   }
 
+  removeItem(item: any){
+    this.compraService.removeItem(item)
+  }
+
+  addItem(item: any){
+    this.compraService.addItem(item)
+  }
 }
