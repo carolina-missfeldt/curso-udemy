@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarrinhoDeComprasService } from 'app/detalhe-restaurant/carrinho-de-compras/carrinho-de-compras.service';
 
 @Component({
   selector: 'mt-carrinho-de-compras',
@@ -6,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarrinhoDeComprasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private compraService: CarrinhoDeComprasService) { }
 
   ngOnInit() {
+  }
+
+  itens(): any[]{
+    return this.compraService.itens
+  }
+
+  total():number {
+    return this.compraService.total()
   }
 
 }

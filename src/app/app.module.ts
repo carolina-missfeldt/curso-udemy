@@ -1,9 +1,11 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { RestaurantService } from 'app/restaurants/restaurant.service';
+import { CarrinhoDeComprasService } from 'app/detalhe-restaurant/carrinho-de-compras/carrinho-de-compras.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -42,7 +44,8 @@ import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.compone
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    RestaurantService 
+    RestaurantService,
+    CarrinhoDeComprasService 
   ],
   bootstrap: [AppComponent]
 })
