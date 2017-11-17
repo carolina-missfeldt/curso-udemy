@@ -20,7 +20,8 @@ import { CarrinhoDeComprasComponent } from 'app/detalhe-restaurant/carrinho-de-c
 import { MenuItemComponent } from 'app/detalhe-restaurant/menu-item/menu-item.component';
 import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.component';
 import { OrderComponent } from './order/order.component';
-import { InputComponent } from './shared/src/app/shared/input/input.component';
+import { InputComponent } from 'app/shared/input/input.component';
+
 
 
 
