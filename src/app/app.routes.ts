@@ -1,25 +1,24 @@
-import { Component } from '@angular/core';
+import {Routes} from '@angular/router'
 
-import {Routes} from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { RestaurantsComponent } from 'app/restaurants/restaurants.component';
-import { DetalheRestaurantComponent } from 'app/detalhe-restaurant/detalhe-restaurant.component';
-import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.component';
-import { MenuComponent } from 'app/detalhe-restaurant/menu/menu.component';
-import { OrderComponent } from './order/order.component';
+import {HomeComponent} from './home/home.component'
+import {RestaurantsComponent} from './restaurants/restaurants.component'
+import {RestaurantDetailComponent} from './restaurant-detail/restaurant-detail.component'
+import {MenuComponent} from './restaurant-detail/menu/menu.component'
+import {ReviewsComponent} from './restaurant-detail/reviews/reviews.component'
+import {OrderSummaryComponent} from './order-summary/order-summary.component'
+import {NotFoundComponent} from './not-found/not-found.component'
 
 export const ROUTES: Routes = [
-    {path: '', component: HomeComponent },
-    {path: 'about', component: AboutComponent},
-    {path: 'restaurantes', component: RestaurantsComponent},
-    {path: 'restaurantes/:id', component: DetalheRestaurantComponent,
-        children: [
-            {path:'', redirectTo: 'menu', pathMatch: 'full'},
-            {path: 'menu', component: MenuComponent},
-            {path: 'reviews', component: ReviewsComponent}
-        ]
-    },
-    {path: 'order', component: OrderComponent }
-
+  {path: '', component: HomeComponent},
+  {path: 'restaurants', component: RestaurantsComponent},
+  {path: 'restaurants/:id', component: RestaurantDetailComponent,
+    children: [
+      {path: '', redirectTo: 'menu', pathMatch: 'full'},
+      {path: 'menu', component: MenuComponent},
+      {path: 'reviews', component: ReviewsComponent}
+    ]},
+  {path: 'order', loadChildren: './order/order.module#OrderModule'},
+  {path: 'order-summary', component: OrderSummaryComponent},
+  {path: 'about', loadChildren: './about/about.module#AboutModule'},
+  {path: '**', component: NotFoundComponent}
 ]
