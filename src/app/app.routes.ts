@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 
 import {Routes} from '@angular/router';
 import { AboutComponent } from './about/about.component';
@@ -6,6 +7,7 @@ import { RestaurantsComponent } from 'app/restaurants/restaurants.component';
 import { DetalheRestaurantComponent } from 'app/detalhe-restaurant/detalhe-restaurant.component';
 import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.component';
 import { MenuComponent } from 'app/detalhe-restaurant/menu/menu.component';
+import { OrderComponent } from './order/order.component';
 
 export const ROUTES: Routes = [
     {path: '', component: HomeComponent },
@@ -18,5 +20,6 @@ export const ROUTES: Routes = [
             {path: 'reviews', component: ReviewsComponent}
         ]
     },
+    {path: 'order', component: OrderComponent }
 
 ]
