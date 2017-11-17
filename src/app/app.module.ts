@@ -21,6 +21,8 @@ import { MenuItemComponent } from 'app/detalhe-restaurant/menu-item/menu-item.co
 import { ReviewsComponent } from 'app/detalhe-restaurant/reviews/reviews.component';
 import { OrderComponent } from './order/order.component';
 import { InputComponent } from 'app/shared/input/input.component';
+import { RadioComponent } from 'app/shared/radio/radio.component';
+
 
 
 
@@ -41,7 +43,8 @@ import { InputComponent } from 'app/shared/input/input.component';
     MenuItemComponent,
     ReviewsComponent,
     OrderComponent,
-    InputComponent
+    InputComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,
