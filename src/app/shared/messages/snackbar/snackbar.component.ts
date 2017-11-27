@@ -18,11 +18,11 @@ import 'rxjs/add/operator/switchMap'
         bottom: '0px'
       })),
       state('visible', style({
-        opacity: 1,
+        opacity: 0.7,
         bottom: '30px'
       })),
-      transition('hidden => visible', animate('500ms 0s ease-in')),
-      transition('visible => hidden', animate('500ms 0s ease-out'))
+      transition('hidden => visible', animate('400ms 0s ease-in')),
+      transition('visible => hidden', animate('400ms 0s ease-out'))
     ])
   ]
 })
@@ -39,7 +39,7 @@ export class SnackbarComponent implements OnInit {
       .do(message=>{
         this.message = message
         this.snackVisibility = 'visible'
-    }).switchMap(message => Observable.timer(3000))
+    }).switchMap(message => Observable.timer(2000))
       .subscribe(timer=> this.snackVisibility = 'hidden')
   }
 
