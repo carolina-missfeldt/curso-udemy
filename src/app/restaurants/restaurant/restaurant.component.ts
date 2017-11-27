@@ -10,8 +10,8 @@ import {Restaurant} from './restaurant.model'
     trigger('restaurantAppeared', [
       state('ready', style({opacity: 1})),
       transition('void => ready', [
-        style({opacity: 0, transform: 'translate(-30px, -10px)'}),
-        animate('300ms 0s ease-in-out')
+        style({opacity: 0, transform: 'translatey(-20px)'}),
+        animate('400ms 0s ease-in')
       ])
     ])
   ]
