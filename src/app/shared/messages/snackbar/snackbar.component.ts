@@ -10,7 +10,7 @@ import 'rxjs/add/operator/switchMap'
 @Component({
   selector: 'mt-snackbar',
   templateUrl: './snackbar.component.html',
-  styleUrls: ['./snackbar.component.css'],
+  styleUrls: ['./snackbar.component.scss'],
   animations: [
     trigger('snack-visibility', [
       state('hidden', style({
