@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 
 body {
     color: #555;
@@ -7,12 +6,6 @@ body {
 .box-header {
     color: inherit;
 }
-
-
-/*
- * Component: Place Info Box
- * -------------------
- */
 
 .place-info-box {
     color: #555;
@@ -51,7 +44,6 @@ body {
     border-bottom-left-radius: 2px;
     display: block;
     float: left;
-    /*height: 120px;*/
     width: 120px;
     text-align: center;
     background: rgba(0, 0, 0, 0.2);
@@ -59,7 +51,6 @@ body {
 
 .place-info-box-icon>img {
     max-width: 100%;
-    /*border-right: 1px solid rgba(0, 0, 0, 0.1);*/
 }
 
 .place-info-box-content {
@@ -87,8 +78,6 @@ body {
     float: left
 }
 
-.place-info-box-text {}
-
 .place-info-box-star {
     display: block;
     font-size: 18px;
@@ -108,10 +97,6 @@ body {
 .progress-description {
     margin: 0;
 }
-
-
-/* Detail For restaurant */
-
 .box-img-detail {
     width: 180px;
     height: 180px;
@@ -122,10 +107,6 @@ body {
 }
 
 
-/*
- * Component: Menu Item
- * -------------------
- */
 
 .menu-item-info-box {
     color: #555;
@@ -164,7 +145,6 @@ body {
     border-bottom-left-radius: 2px;
     display: block;
     float: left;
-    /*height: 120px;*/
     width: 120px;
     text-align: center;
     background: rgba(0, 0, 0, 0.2);
@@ -172,7 +152,6 @@ body {
 
 .menu-item-info-box-icon>img {
     max-width: 100%;
-    /*border-right: 1px solid rgba(0, 0, 0, 0.1);*/
 }
 
 .menu-item-info-box-price {
@@ -209,16 +188,12 @@ body {
     width: 80%;
 }
 
-.menu-item-info-box-text {}
 
 .menu-item-info-box-more {
     display: block;
 }
 
 
-/**
- buttons
-*/
 
 .danger {
     color: #dd4b39;
@@ -226,7 +201,7 @@ body {
 }
 
 
-/*Jumbotrons*/
+
 
 .jumbotron {
     background-color: #fff;
